@@ -1,4 +1,44 @@
 <div class="NewsfeedPage">
+	<div class="modal fade" id="myModal" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4><i class="fa fa-upload"></i> Photo Upload</h4>
+				</div>
+				<div class="modal-body">
+					<form role="form">
+						<div class="input-group image-preview">
+							<input type="text" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
+							<span class="input-group-btn">
+								<!-- image-preview-clear button -->
+								<button type="button" class="btn btn-default image-preview-clear" style="display:none;">
+									<span class="glyphicon glyphicon-remove"></span> Clear
+								</button>
+								<!-- image-preview-input -->
+								<div class="btn btn-default image-preview-input">
+									<span class="glyphicon glyphicon-folder-open"></span>
+									<span class="image-preview-input-title">Browse</span>
+									<input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/> <!-- rename it -->
+								</div>
+							</span>
+						</div>
+						<br>
+						<button type="submit" class="btn"><i class="fa fa-sign-in"></i> Upload</button>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<label for="psw"><i class="fa fa-hashtag"></i> 해시태그 입력기</label>
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="#태그를 입력하세요.">
+						<span class="input-group-btn">
+							<button class="btn btn-secondary" type="button">입력</button>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> 
 	<div class="navbar">
 			<div class="navbar-content">
 				<div class="navbar-logo">
@@ -26,7 +66,7 @@
 
 		<div class="contentWrap">
 			<!--AddCard-->
-			<div class="addCard">
+			<div class="addCard" id="myBtn">
 				<div class="img"><img src="img/plus.png" alt="" ></div>
 				<div class="txt">&nbsp;새 글 추가</div>
 			</div>
