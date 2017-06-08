@@ -62,8 +62,6 @@ export class NewsfeedPageComponent {
 
 
     this.cardItemArray.push(this.cardItem);
-    this.cardItemArray.push(this.cardItem);
-    this.cardItemArray.push(this.cardItem);
   }
 
 
