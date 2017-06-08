@@ -1,1 +1,178 @@
 .NewsfeedPage {}
+/*global*/
+body{
+	margin: 0px;
+	background-color: #fafafa;
+}
+.form-control{
+	height: 38px;
+	color: black;
+}
+.img-circle{
+	border: 1px solid #lightgray;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+}
+.btn{
+	line-height: 1.76;
+}
+.btn:hover{
+	background-color: #E3EEEC;
+	border: 0px;
+}
+hr{
+	width: 40%;
+}
+a{
+	text-decoration:none;
+	cursor: pointer; 
+}
+a:hover{
+	text-decoration:none;
+}
+/*navbar*/
+.navbar{
+	display: block;
+	width: 100%;
+	height: 55px;
+	background-color: #97decc;
+	margin-bottom: 0px;
+}
+.navbar> .navbar-content{
+	padding: 5px;
+}
+.navbar> .navbar-content>.navbar-logo{
+	float: left;
+	margin-left:15px;
+}
+a.logo{
+	color: #fff;
+	font-size: 15pt;
+	font-weight: bold;
+	padding: 1px;
+	line-height: 40px;
+}
+.navbar> .navbar-content> .search-container{
+	float: left;
+	margin-left: 28%;
+	width: 26%;
+	height: 40px;
+	color: black;
+}
+.navbar> .navbar-content> .navbar-logout{
+	margin-left: 90%;
+	color: #000000;
+}
+
+/*content*/
+.contentWrap{
+	clear:left;
+	background-color: #fafafa;
+	padding: 15px;
+}
+/*addCard*/
+.contentWrap> .addCard{
+	clear: left;
+	width: 50%;
+	margin: 10px auto;
+	padding: 10px;
+	background-color: #fff;
+	cursor: pointer;
+}
+.contentWrap> .addCard:hover{
+	background-color: #E3EEEC;
+	color: white;
+}
+.contentWrap> .addCard> .img{
+	width: 10%;
+	margin: 10px auto;
+}
+.contentWrap> .addCard> .txt{
+	margin: 10px auto;
+	color: #BBB;
+	font-size: 11pt;
+	text-align: center;
+}
+/*Card Template*/
+.contentWrap> .card{
+	width: 50%;
+	margin: 15px auto;
+	background-color: #fff;
+}
+.contentWrap> .card> .card-header{
+	height: 60px;
+	border-bottom: 1px solid lightgray;
+	padding: 3px;
+}
+.contentWrap> .card> .card-header> .author-img{
+	float:left;
+	padding-left: 10px;
+}
+.contentWrap> .card> .card-header> .author-id{
+	float: left;
+	margin-left: 12px;
+	font-size: 12pt;
+	line-height: 58px;
+}
+.contentWrap> .card> .card-body> .card-imgWrap{
+	border-bottom: 1px solid lightgray;
+}
+.contentWrap> .card> .card-body> .card-imgWrap> .card-img{
+	width: 100%;
+	height: auto;
+}
+.contentWrap> .card> .card-body> .card-txt{
+	padding: 10px;
+	font-size: 11pt;
+	color: #2B2B2B;
+}
+.contentWrap> .card> .card-body> .card-hashtag{
+	padding-left: 10px;
+	font-size: 11pt;
+	color: #434A7A;
+}
+.contentWrap> .card> .card-footer{
+	padding: 10px;
+	font-size: 8pt;
+	color: #BBB;
+}
+
+/*footer*/
+.footer{
+	background-color: #fff;
+}
+.footer> .container{
+	padding: 25px;
+	margin: 0px auto;
+	width: 50%;
+}
+.footer> .container> .logo{
+	float:left;
+	width: 20%;
+	height: auto;
+}
+.footer> .container> .infoWrap{
+	text-align: center;
+	margin-top: 30px;
+}
+.footer> .container> .infoWrap> .info{
+	color: #4dadf7;
+	cursor: pointer;
+	font-size: 10pt;
+}
+.footer> .container> .infoWrap> .info:hover{
+	color:#1c7cd6;
+}
+.footer> .container> .contact{
+	margin-top: 10px;
+	font-size: 10pt;
+	color: #BBB;
+	text-align: center;
+}
+.footer> .container> .copyright{
+	margin-top: 15px;
+	color: #BBB;
+	font-size: 9pt;
+	text-align: center;
+}
