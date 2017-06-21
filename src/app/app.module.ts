@@ -8,6 +8,7 @@ import { NewsfeedModule } from './newsfeed/newsfeed.module';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { requestOptionsProvider } from './default-request-options.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,9 @@ import { AppRoutingModule } from './app-routing.module';
     NewsfeedModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    requestOptionsProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
