@@ -1,4 +1,6 @@
 import { Component,HostListener } from '@angular/core';
+import 'rxjs/add/operator/toPromise';
+import {Http} from "@angular/http";
 
 @Component({
   selector: 'app-newsfeed-page',
@@ -7,9 +9,13 @@ import { Component,HostListener } from '@angular/core';
 })
 export class NewsfeedPageComponent {
 
-
+  constructor(private http:Http){
+    this.setCard();
+    this.aaaa="테스트";
+  }
   //==스크롤이 변경되었을 때============================================================================================
   @HostListener('window:scroll', ['$event'])
+
   doSomething(event) {
     this.scroll_position = document.body.scrollTop;
 
@@ -34,9 +40,16 @@ export class NewsfeedPageComponent {
 
   aaaa:string;
 
-  constructor() {
+  /*constructor() {
     this.setCard();
     this.aaaa="테스트";
+  }*/
+
+  getPhotoList(){
+    return this.http.get('http://198.199.111.152:9090/api/photo')
+        .toPromise()
+        .then()
+        .catch()  
   }
 
 
