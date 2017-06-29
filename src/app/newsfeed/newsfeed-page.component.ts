@@ -49,10 +49,8 @@ export class NewsfeedPageComponent {
     return this.http.get('http://198.199.111.152:9090/api/photo')
         .toPromise()
         .then()
-        .catch()  
+        .catch() 
   }
-
-
 
   //json값을 객체화한다
   setCard(){
