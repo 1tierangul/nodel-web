@@ -8,7 +8,7 @@ import { environment } from '../../environments/environment';
 
 const baseUrl = environment.production
   ? '/api'
-  : 'http://198.199.111.152:9090';
+  : 'http://198.199.111.152:9090/api';
 
 @Injectable()
 export class FetchService {

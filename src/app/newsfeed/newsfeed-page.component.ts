@@ -3,6 +3,7 @@ import 'rxjs/add/operator/toPromise';
 import {Http} from "@angular/http";
 import {FetchService} from "./fetch.service";
 
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'app-newsfeed-page',
@@ -17,11 +18,16 @@ export class NewsfeedPageComponent {
     this.setCard();
 
 
-    this.fetchService.getPhotoList().subscribe(posts => {
-      this.posts = posts;
-      // console.log(posts);
-    });
+    this.fetchService.getPhotoList().then((data) => {
 
+      //받은 데이터가 무엇인지 확인
+      console.log('연결?');
+      console.log(data);
+
+      //이렇게?
+      // data = data.map(data => data.json());
+      // this.cardItemArray = data;
+    });
   }
 
 
