@@ -75,6 +75,11 @@ export class FetchService {
 
 
   postPhoto(fd: FormData) {
+    const fd= new FormData();
+    fd.append('img', aFile);
+    fd.append('context', string);
+    fd.append('hashTag', JSON.stringify(['tag1', 'tag2']));
+
     const headers = new Headers();
     headers.append('Authorization', `token ${this.token}`);
     headers.append('Content-Type', 'multipart/form-data');
