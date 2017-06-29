@@ -1,18 +1,32 @@
 import { Component,HostListener } from '@angular/core';
 import 'rxjs/add/operator/toPromise';
 import {Http} from "@angular/http";
+import {FetchService} from "./fetch.service";
+
 
 @Component({
   selector: 'app-newsfeed-page',
   templateUrl: './newsfeed-page.component.html',
-  styleUrls: ['./newsfeed-page.component.css']
+  styleUrls: ['./newsfeed-page.component.css'],
+  providers: [FetchService]
 })
+
 export class NewsfeedPageComponent {
 
-  constructor(private http:Http){
+  constructor(private http:Http, private fetchService: FetchService){
     this.setCard();
-    this.aaaa="테스트";
+
+
+    this.fetchService.getNewsfeedList().subscribe(posts => {
+      this.posts = posts;
+      // console.log(posts);
+    });
+
   }
+
+
+
+
   //==스크롤이 변경되었을 때============================================================================================
   @HostListener('window:scroll', ['$event'])
 
@@ -49,7 +63,7 @@ export class NewsfeedPageComponent {
     return this.http.get('http://198.199.111.152:9090/api/photo')
         .toPromise()
         .then()
-        .catch()  
+        .catch()
   }
 
 
