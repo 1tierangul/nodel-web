@@ -17,7 +17,7 @@ export class NewsfeedPageComponent {
     this.setCard();
 
 
-    this.fetchService.getNewsfeedList().subscribe(posts => {
+    this.fetchService.getPhotoList().subscribe(posts => {
       this.posts = posts;
       // console.log(posts);
     });

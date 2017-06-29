@@ -50,7 +50,7 @@ export class FetchService {
       .catch(this.handleError);
   }
 
-  getNewsfeedList(startIndex: number = 0, hashTag?: string) {
+  getPhotoList(startIndex: number = 0, hashTag?: string) {
     const headers = new Headers();
     headers.append('Authorization', `token ${this.token}`);
 
